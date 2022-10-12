@@ -6,6 +6,26 @@ package Homework.products;
 // в список (например, слишком большое содержание калорий)
 //Реализовать метод, который выводит названия всех продуктов из списка
 
-public class MyProducts {
+import java.util.Arrays;
 
+public class MyProducts {
+    public int maxProteins;
+    public int maxFats;
+    public int maxCarbs;
+    public int maxCalories;
+    public String[] productsList;
+
+    public void setProductsList(Product product){
+        for (int i = 0; i < productsList.length; i++) {
+            if (productsList[i] == null && product.calories <= maxCalories && product.fat <= maxFats && product.proteins <= maxProteins
+            && product.carb <= maxCarbs) {
+                productsList[i] = product.toString();
+            } else System.out.println("Слишком сытно для тебя:(");
+        }
+
+    }
+
+    public void setProductsList(){
+        System.out.println(Arrays.toString(productsList));
+    }
 }

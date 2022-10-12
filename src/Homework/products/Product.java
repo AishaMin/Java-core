@@ -6,27 +6,45 @@ package Homework.products;
 //Создать не менее 4 экземпляров данного класса (объектов)
 public class Product {
     public String nameProduct;
-    public double fat;
-    public double proteins;
-    public double carb;
-    public double calories;
+    public int fat;
+    public int proteins;
+    public int carb;
+    public int calories;
 
 
 
     public Product(String nameProduct) {
+
         this.nameProduct = nameProduct;
     }
 
-    public void characteristics (double calories, double proteins, double fat, double carb){
-        if (calories < 0 || proteins < 0 || fat < 0 || carb < 0) {
+
+    public void setProteins(int proteins){
+        if (proteins < 0){
+            throw new IllegalArgumentException("Калории не могут быть отрицательными");
+        }
+        this.proteins = proteins;
+    }
+
+    public  void setFat (int fat){
+        if ( fat < 0 ) {
             throw new IllegalArgumentException("Свойства не могут быть менше нуля");
         }
-
-        this.calories = calories;
-        this.proteins = proteins;
         this.fat = fat;
-        this.carb = carb;
+    }
 
+    public  void setCarb (int carb){
+        if (carb < 0) {
+            throw new IllegalArgumentException("Свойства не могут быть менше нуля");
+        }
+        this.carb = carb;
+    }
+
+    public void setCalories(int calories){
+        if (calories < 0){
+            throw new IllegalArgumentException("Калории не могут быть отрицательными");
+        }
+        this.calories = calories;
     }
 }
 
