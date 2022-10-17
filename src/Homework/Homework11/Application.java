@@ -7,8 +7,11 @@ public class Application {
     public static void main(String[] args) {
 
         Planet[] planets = Planet.values();
-        System.out.println(Arrays.toString(planets));
+
+        for (Planet planet:planets) {
+            System.out.println("Planet " + planet.getName() + "; radius " + planet.getRadius() + "; weight" + planet.getWeight());
+        }
         }
     }
-     
+
 
