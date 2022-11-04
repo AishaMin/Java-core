@@ -23,7 +23,8 @@ public class Group {
 
     public void setClimberCount(int climberCount) {
         if (climberCount < 0 || climberCount > 3){
-            throw new IllegalArgumentException("количество альпинистов не может быть меньше нуля, а так же в группе не может быть больше трех участников");
+            throw new IllegalArgumentException("количество альпинистов не может быть меньше нуля, " +
+                    "а так же в группе не может быть больше трех участников");
         } else if (climberCount < 3){
             recruitedGroup = false; // группа не закрыта
         } else

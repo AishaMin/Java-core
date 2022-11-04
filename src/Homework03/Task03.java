@@ -36,7 +36,7 @@ public class Task03 {
                 midrange = Math.round((min + max) / 2);
 
                 //если округление сравнило середину с нижней границей, увеличиваем середину на 1:
-                if (min == midrange && midrange!=100) {
+                if (min == midrange && midrange != 100) {
                     midrange += 1;
                 }
             } else if (strInput.equals("-")) {
@@ -45,7 +45,6 @@ public class Task03 {
             }
 
 
-
-
+        }
     }
 }
